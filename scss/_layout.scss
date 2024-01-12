@@ -1,0 +1,143 @@
+@use 'breakpoints' as *;
+
+.banner--one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  margin-top: 54px;
+  background-color: #101010;
+  color: white;
+  overflow: hidden;
+  height: 54px;
+  font-size: 1rem;
+
+  &__left {
+
+    &__image {
+      position: absolute;
+      top: -2rem;
+      left: -3rem;
+      width: 230px;
+
+      @include breakpoint (tablet) {
+        left: 0;
+      }
+    }
+  }
+
+  &__middle {
+    position: absolute;
+    width: 100%;
+
+    font-size: 1rem;
+    z-index: 1;
+
+    &__cont {
+      display: flex;
+      justify-content:flex-end;
+      gap: 0.5rem;
+      font-weight: 300;
+
+      @include breakpoint (tablet) {
+        justify-content: center;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding-right: 1.5rem;
+
+    @include breakpoint (desktop) {
+      padding-right: 0.5rem;
+    }
+
+    &__button {
+
+      &--shop {
+        display: none;
+        height: 38px;
+        width: 104px;
+        border: none;
+        border-radius: 2rem;
+        font-weight: 500;
+        z-index: 1;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        @include breakpoint (tablet) {
+          display: block;
+        }
+
+      }
+
+      &--close {
+        display: none;
+        font-weight: 500;
+        font-size: 1rem;
+        width: 48px;
+        height: 48px;
+
+        border: none;
+        background-color: inherit;
+        color: white;
+        opacity: 30%;
+        z-index: 1;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 50%;
+        }
+
+        @include breakpoint (desktop) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.text--hide {
+  display: none;
+
+  @include breakpoint (desktop) {
+    display: inline-block;
+  }
+}
+
+.hide--mobile {
+  display: none;
+
+  @include breakpoint (tablet) {
+    display: inline-block;
+  }
+}
+
+.text--gold {
+  color: #D7A830;
+  font-weight: 500;
+}
+
+.bullet {
+  color: rgb(66, 66, 66);
+}
+
+.bold {
+  font-weight: 500;
+}
+
+
+[class^="ico-"], [class*=" ico-"] {
+  font: normal 1em/1 Arial, sans-serif;
+  display: inline-block;
+  opacity: 30%;
+}
+
+.ico-times::before { content: "\2715"; }
