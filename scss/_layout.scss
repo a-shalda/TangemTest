@@ -17,12 +17,18 @@
 
     &__image {
       position: absolute;
-      top: -2rem;
-      left: -3rem;
-      width: 230px;
+      top: -1.5rem;
+      left: -2rem;
+      scale: 1.1;
 
       @include breakpoint (tablet) {
-        left: 0;
+        top: 0;
+        left: 3rem;
+        scale: 1.5;
+      }
+
+      @include breakpoint (desktop) {
+        left: 6rem;
       }
     }
   }
@@ -108,7 +114,7 @@
           font-size: 1rem;
   
           -webkit-text-fill-color: transparent;
-          background: linear-gradient(90deg,#ffffff,#0B0B0B 40%);
+          background: linear-gradient(90deg,#d4d4d4,#0B0B0B 40%);
           -webkit-background-clip: text;
 
           &:hover {
@@ -170,4 +176,19 @@
 
 .bold {
   font-weight: 500;
+}
+
+.banner--two {
+
+  &__left {
+
+    &__image {
+      width: 600px;
+    }
+  }
+
+  &__right {
+
+  }
+
 }
