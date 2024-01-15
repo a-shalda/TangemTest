@@ -1,0 +1,1 @@
+https://tangem-test-seven.vercel.app/
