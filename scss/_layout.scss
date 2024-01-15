@@ -169,6 +169,14 @@
   }
 }
 
+.hide--mobile--one {
+  display: none;
+
+  @include breakpoint (mobile--banner--two) {
+    display: inline-block;
+  }
+}
+
 .text--gold {
   color: #D7A830;
   font-weight: 500;
@@ -178,17 +186,123 @@
   font-weight: 500;
 }
 
-.banner--two {
+.cont {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  position: relative;
 
-  &__left {
+  .banner--two {
+    background-image: url("/img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:right;
+    height: 349px;
+    width: 600px;
+    box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.45);
+    margin-right: -1rem;
+    text-align: center;
+    background-color: #000;
 
-    &__image {
-      width: 600px;
+    display: flex;
+    justify-content: center;
+    padding-block: 1rem;
+
+    @include breakpoint (mobile--banner--one) {
+      padding-left: 8rem;
+      margin-right: 0;
+    }
+
+    @include breakpoint (mobile--banner--two) {
+      padding-left: 12rem;
+      border-radius: 1rem;
+      justify-content: flex-end;
+      padding: 1rem;
+    }
+
+    @include breakpoint (tablet) {
+      background-position:center;
+      position: absolute;
+      right: 1rem;
+    }
+  
+    &__right {
+      display: flex;
+      flex-direction: column;
+  
+      &__header {
+        color: #fff;
+        font-size: 46px;
+        font-weight: 500;
+        margin-right: 1rem;
+        margin-top: 1rem;
+      }
+  
+      &__discount {
+        font-size: 40px;
+        font-weight: 500;
+        margin-right: 1rem;
+        margin-top: -0.2rem;
+        margin-bottom: 0.4rem;
+  
+        -webkit-text-fill-color: transparent;
+        background: linear-gradient(90deg,#D2981A99 30%,#fff9eb);
+        -webkit-background-clip: text;
+      }
+  
+      &__code {
+        color: #6C6C70;
+        margin-right: 1rem;
+      }
+  
+      &__button--close {
+        position: absolute;
+        right: 1rem;
+
+        @include breakpoint (mobile--banner--two) {
+          align-self: flex-end;
+          position: static;
+        }
+
+        font-weight: 500;
+        font-size: 1rem;
+        width: 24px;
+        height: 24px;
+  
+        border: none;
+        background-color: inherit;
+        color: white;
+        opacity: 30%;
+  
+        &:hover {
+          cursor: pointer;
+          opacity: 50%;
+        }
+      }
+  
+      &__button--shop {
+        margin-top: 2.5rem;
+        background-color: rgba(255, 255, 255, 0.10);
+        border-radius: 14px;
+        border: none;
+        margin-right: 1rem;
+        letter-spacing: 0.02rem;
+
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 1rem;
+  
+        height: 42px;
+        font-size: 1rem;
+        color: hsla(0, 0%, 100%, 0.901);
+  
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.166);
+          cursor: pointer;
+        }
+      }
     }
   }
-
-  &__right {
-
-  }
-
 }

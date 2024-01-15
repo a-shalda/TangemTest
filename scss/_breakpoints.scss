@@ -1,6 +1,8 @@
-//mobile 393px, tablet 834px, desktop 1728px
+//mobile 393px, mobile--banner 600px; tablet 834px, desktop 1728px
 $breakpoints-up: (
   "mobile": 393px,
+  "mobile--banner--one": 450px,
+  "mobile--banner--two": 600px,
   "tablet": 834px,
   "desktop": 1728px,
 );
