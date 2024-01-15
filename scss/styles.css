@@ -219,8 +219,10 @@ picture {
   display: flex;
   flex-grow: 1;
   justify-content: center;
+  margin-top: 10rem;
 }
 .cont .banner--two {
+  visibility: hidden;
   background-image: url("/img.png");
   background-repeat: no-repeat;
   background-size: cover;
